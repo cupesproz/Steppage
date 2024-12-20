@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin= "anonymous" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Oswald|Caveat|Caveat+Brush|Poppins|Roboto|Kalam|Allura|Acme|Cabin|Anton|Abhaya+Libre|Courier+Prime|Cutive+Mono|Nunito|Ranchers|Permanent+Marker|Licorice' rel='stylesheet'>
+
+<style>
+body,
+html {
+		min-width: 375px
+}
+body {
+    background: #e8e8e8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 16px
+}
+a,
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal
+}
+h1 {
+	text-align:	center;
+	margin: 0 auto 25px;
+	color: #2e4369;
+	font-family: Averta,avenir w02,Avenir,Helvetica,Arial,sans-serif;
+	font-size: 38px;
+}
+h2 {
+	font-size: 30px;
+	text-shadow: 1px 1px 2px #cccccc;
+	color: #ff5b00;
+	font-weight: 500;
+	padding: 0 0;
+	font-family: acme;
+	margin: 30px 0;
+	text-align: center;
+}
+h3 {
+		color: #777;
+		font-size: 18px;
+}
+p {
+    line-height: 1.5em;
+		margin: 0 0 17px;
+}
+a {
+    color: #00a4df;
+}
+u {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+img {
+    max-width: 75%;
+    height: auto
+}
+.container blockquote{
+	margin: 30px auto;
+	border: 1px solid #eee;
+	box-shadow: 3px 5px 5px #d5d5d5;
+	background: #e3fdff;
+	max-width: 600px;
+	width: 90%;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff
+}
+#header{
+	padding: 0 0 10px;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 0 4px 10px 0 #c9c9c9;
+	background: #fff;
+	width: 100%;
+}
+#header>div{
+	max-width: 90%;
+	width: 1000px;
+	margin: 0 auto;
+}
+footer {
+    background: #1C2224;
+    font-weight: 400;
+    text-align: center;
+    padding: 60px 20px 10px
+}
+footer a {
+    color: #CCC!important
+}
+footer a:hover,
+footer h4 {
+    color: #FFF!important
+}
+footer p {
+    color: #999!important
+}
+.footer-box{
+	margin-bottom: 30px;
+}
+.img-responsive {
+    margin-left: auto;
+    margin-right: auto
+}
+
+#contentfull {
+position: relative;
+z-index: 1; /* prevent shadows falling behind containers with backgrounds */
+overflow: hidden;
+margin: 0;
+padding: 0; 
+}
+
+
+#contentbox {
+position: relative;
+width: 700px;
+max-width: 95%;
+padding: 30px 40px;
+border: 1px solid #efefef;
+margin: 50px auto 50px;
+background: #fefefe;
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+}
+
+
+#contentbox:before, #contentbox:after {
+content: '';
+z-index: -1;
+position: absolute;
+left: 10px;
+bottom: 15px;
+width: 70%;
+max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+max-height: 100px;
+height: 55%;
+-webkit-box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+-webkit-transform: skew(-15deg) rotate(-6deg);
+-moz-transform: skew(-15deg) rotate(-6deg);
+-ms-transform: skew(-15deg) rotate(-6deg);
+-o-transform: skew(-15deg) rotate(-6deg);
+transform: skew(-15deg) rotate(-6deg); 
+}
+
+
+#contentbox:after {
+left: auto;
+right: 10px;
+-webkit-transform: skew(15deg) rotate(6deg);
+-moz-transform: skew(15deg) rotate(6deg);
+-ms-transform: skew(15deg) rotate(6deg);
+-o-transform: skew(15deg) rotate(6deg);
+transform: skew(15deg) rotate(6deg); 
+}
+
+#contentbox blockquote{
+	margin: 30px auto;
+	border: 1px solid #e41212;
+	box-shadow: 3px 5px 5px #c3c3c3;
+	max-width: 600px;
+	width: 90%;
+	border-bottom-right-radius: 30px;
+	position: relative;
+	padding: 10px 20px 10px 30px;
+}
+
+.blockquote-icon {
+	width: 50px;
+	height: 45px;
+	background: #ff4242;
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+	line-height: 42px;
+	position: absolute;
+	top: 37px;
+	left: -19px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.blockquote-icon::before {
+    content: "";
+    border-bottom: 16px solid #e41212;
+    border-left: 18px solid transparent;
+    position: absolute;
+    top: -16px;
+    left: 1px;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://leadsleap.com/leadsleap.js?3"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<title>LeadLeap Landing Page - Builder And Hosting</title>
+	</head>
+	<body class="wow" style="visibility: hidden;">
+		<div class="preloader"></div>
+		<section id="contentfull">
+			<div id="contentbox">
+				<h1>About lllpg.com</h1>
+				<p>Hi,</p>
+				<p>You probably have reached this page because of an invalid link from this domain.</p>
+				<p>lllpg.com is the hosting domain for our Page Building service.</p>
+				<p>It is an exclusive service for members of LeadsLeap.com.</p>
+				<p>You can learn more about our Page Builder <a href="https://leadsleap.com/pagebuilder/">here</a>.</p>
+				<p>If you have received spam emails with lllpg.com links, or come across any page with malicious, phishing, drug, gambling, adult or illegal content, please <a href="https://leadsleap.com/contact.php">contact our support</a> with as much details as possible. We will ban the link as well as the user immediately.</p>
+				<p>Together, we can make the internet a better place.</p>
+				<p>Yours sincerely,</p>
+				<div style="font-family: Licorice;font-size: 35px;font-weight: bold;">Kenneth Koh</div>
+				<p>lllpg.com, by LeadsLeap.com</p>
+			</div>
+		</section>		
+	<!-- end footer -->
+		<script>
+		$(function() {
+				new WOW().init();
+				$('.preloader').fadeOut(1000);
+				$("img").unveil(300);
+		});
+		</script>
+		<img src="https://trckapp.com/pixel.php?l=27688" width="0" height="0" alt=""/>
+	</body>
+</html>
